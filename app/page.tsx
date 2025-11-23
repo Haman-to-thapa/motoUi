@@ -16,6 +16,11 @@ import Eleven from "@/components/Eleven";
 import Twelve from "@/components/TwelveTh";
 import Thirteen from "@/components/Thriteen";
 import Fourteen from "@/components/Fourteen";
+import Fifteen from "@/components/Fifteen";
+import Sixteen from "@/components/Sixteen";
+import SevenTeen from "@/components/SevenTeen";
+import Footer from "@/components/Footer";
+
 
 
 
@@ -36,6 +41,10 @@ export default function Home() {
       <Twelve />
       <Thirteen />
       <Fourteen />
+      <Fifteen />
+      <Sixteen />
+      <SevenTeen />
+      <Footer />
 
 
     </div>
