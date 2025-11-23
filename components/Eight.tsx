@@ -29,7 +29,7 @@ const Eight = () => {
           Request a quote
         </h1>
 
-        <div className="mt-6 sm:mt-8 lg:mt-[30px] w-full bg-white rounded-lg sm:rounded-[6px] shadow-sm p-4 sm:p-6 lg:p-8">
+        <div className="mt-6 sm:mt-8 lg:mt-[30px] w-full bg-white rounded-lg sm:rounded-md shadow-sm p-4 sm:p-6 lg:p-8">
           <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6">
             {/* Grid for form fields */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
@@ -41,7 +41,7 @@ const Eight = () => {
                     required: "Name is required",
                     minLength: { value: 2, message: "Name must be at least 2 characters" }
                   })}
-                  className="w-full h-10 sm:h-12 lg:h-[46px] mt-1 sm:mt-2 border border-gray-300 rounded-lg sm:rounded-[6px] px-3 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500 transition-colors"
+                  className="w-full h-10 sm:h-12 lg:h-[46px] mt-1 sm:mt-2 border border-gray-300 rounded-lg sm:rounded-md px-3 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500 transition-colors"
                 />
                 {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
               </div>
@@ -57,7 +57,7 @@ const Eight = () => {
                       message: "Invalid email address"
                     }
                   })}
-                  className="w-full h-10 sm:h-12 lg:h-[46px] mt-1 sm:mt-2 border border-gray-300 rounded-lg sm:rounded-[6px] px-3 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500 transition-colors"
+                  className="w-full h-10 sm:h-12 lg:h-[46px] mt-1 sm:mt-2 border border-gray-300 rounded-lg sm:rounded-md px-3 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500 transition-colors"
                 />
                 {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
               </div>
@@ -73,7 +73,7 @@ const Eight = () => {
                       message: "Invalid phone number"
                     }
                   })}
-                  className="w-full h-10 sm:h-12 lg:h-[46px] mt-1 sm:mt-2 border border-gray-300 rounded-lg sm:rounded-[6px] px-3 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500 transition-colors"
+                  className="w-full h-10 sm:h-12 lg:h-[46px] mt-1 sm:mt-2 border border-gray-300 rounded-lg sm:rounded-md px-3 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500 transition-colors"
                 />
                 {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>}
               </div>
@@ -83,7 +83,7 @@ const Eight = () => {
                 <input
                   type="text"
                   {...register("timeFrame", { required: "Time frame is required" })}
-                  className="w-full h-10 sm:h-12 lg:h-[46px] mt-1 sm:mt-2 border border-gray-300 rounded-lg sm:rounded-[6px] px-3 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500 transition-colors"
+                  className="w-full h-10 sm:h-12 lg:h-[46px] mt-1 sm:mt-2 border border-gray-300 rounded-lg sm:rounded-md px-3 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500 transition-colors"
                 />
                 {errors.timeFrame && <p className="text-red-500 text-sm mt-1">{errors.timeFrame.message}</p>}
               </div>
@@ -93,7 +93,7 @@ const Eight = () => {
                 <input
                   type="text"
                   {...register("size", { required: "Size is required" })}
-                  className="w-full h-10 sm:h-12 lg:h-[46px] mt-1 sm:mt-2 border border-gray-300 rounded-lg sm:rounded-[6px] px-3 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500 transition-colors"
+                  className="w-full h-10 sm:h-12 lg:h-[46px] mt-1 sm:mt-2 border border-gray-300 rounded-lg sm:rounded-md px-3 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500 transition-colors"
                 />
                 {errors.size && <p className="text-red-500 text-sm mt-1">{errors.size.message}</p>}
               </div>
@@ -107,13 +107,13 @@ const Eight = () => {
                     min: { value: 1, message: "Quantity must be at least 1" },
                     valueAsNumber: true
                   })}
-                  className="w-full h-10 sm:h-12 lg:h-[46px] mt-1 sm:mt-2 border border-gray-300 rounded-lg sm:rounded-[6px] px-3 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500 transition-colors"
+                  className="w-full h-10 sm:h-12 lg:h-[46px] mt-1 sm:mt-2 border border-gray-300 rounded-lg sm:rounded-md px-3 focus:outline-blue-500 focus:ring-2 focus:ring-blue-500 transition-colors"
                 />
                 {errors.quantity && <p className="text-red-500 text-sm mt-1">{errors.quantity.message}</p>}
               </div>
             </div>
 
-            {/* Textarea outside the grid */}
+            {/* Textarea */}
             <div>
               <label className="font-medium text-sm">Please Describe Your Project*</label>
               <textarea
@@ -121,18 +121,18 @@ const Eight = () => {
                   required: "Project description is required",
                   minLength: { value: 10, message: "Description must be at least 10 characters" }
                 })}
-                className="mt-1 sm:mt-2 w-full h-32 sm:h-40 lg:h-[229px] border border-gray-300 rounded-lg sm:rounded-[6px] p-3 resize-none focus:outline-blue-500 focus:ring-2 focus:ring-blue-500 transition-colors"
+                className="mt-1 sm:mt-2 w-full h-32 sm:h-40 lg:h-[229px] border border-gray-300 rounded-lg sm:rounded-md p-3 resize-none focus:outline-blue-500 focus:ring-2 focus:ring-blue-500 transition-colors"
               ></textarea>
               {errors.description && <p className="text-red-500 text-sm mt-1">{errors.description.message}</p>}
             </div>
 
-            {/* Button outside the grid */}
-            <div className="flex justify-center mt-4">
+            {/* Button - Made more prominent */}
+            <div className="flex justify-center mt-6">
               <button
                 type="submit"
-                className="w-full sm:w-auto px-8 py-3 bg-blue-600 text-white rounded-lg sm:rounded-[6px] font-medium hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                className="w-full sm:w-auto px-8 py-4 bg-blue-600 text-white rounded-lg sm:rounded-md font-bold text-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-lg"
               >
-                Submit Quote Request
+                SUBMIT QUOTE REQUEST
               </button>
             </div>
           </form>
