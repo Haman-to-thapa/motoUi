@@ -122,7 +122,8 @@ const Eight = () => {
               {errors.description && <p className="text-red-500 text-sm mt-1">{errors.description.message}</p>}
             </div>
 
-            <div className="lg:col-span-2 flex justify-center mt-4 sm:mt-6">
+            {/* FIXED BUTTON - Removed lg:col-span-2 to ensure it's always visible */}
+            <div className="col-span-1 lg:col-span-2 flex justify-center mt-4 sm:mt-6">
               <button
                 type="submit"
                 className="w-full sm:w-auto px-8 py-3 bg-blue-600 text-white rounded-lg sm:rounded-[6px] font-medium hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
