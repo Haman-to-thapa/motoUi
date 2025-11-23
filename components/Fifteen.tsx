@@ -5,55 +5,31 @@ import { ArrowRight } from "lucide-react";
 
 const Fifteen = () => {
   return (
-    <div className="w-full px-[80px] py-[80px] flex flex-col gap-[80px] items-center mt-40">
-
-      {/* INNER WRAPPER */}
-      <div className="w-full max-w-[1280px] flex flex-col gap-[32px] items-center">
-
-        {/* HEADING */}
-        <h2
-          className="w-full max-w-[1280px] text-[42px] font-[700] leading-[100%] tracking-[-0.02em] text-center uppercase 
-          font-['Roboto_Condensed'] text-[#0F172A]"
-        >
+    <div className="w-full px-4 sm:px-6 md:px-8 lg:px-20 py-16 md:py-20 flex flex-col gap-12 md:gap-20 items-center mt-20 md:mt-40">
+      <div className="w-full max-w-7xl flex flex-col gap-6 md:gap-8 items-center">
+        <h2 className="w-full max-w-7xl text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold leading-tight tracking-[-0.02em] text-center uppercase font-['Roboto_Condensed'] text-[#0F172A]">
           Lorem ipsum dolor sit amet
         </h2>
 
-        {/* PARAGRAPH */}
-        <p
-          className="w-full max-w-[1280px] text-[18px] font-[400] leading-[25px] text-center font-['Inter'] text-[#0F172A]"
-        >
+        <p className="w-full max-w-7xl text-base sm:text-lg md:text-[18px] font-normal leading-relaxed md:leading-[25px] text-center font-['Inter'] text-[#0F172A] px-4">
           Aliquet sed nulla tincidunt pulvinar sed fames sit facilisis dictumst. Ornare faucibus quis velit fringilla aliquam ultricies.
           Malesuada ut aliquam at ac est nisi, interdum etiam dignissim. Sed ut vestibulum eget purus ornare. Risus elit et fringilla
           habitant ut facilisi.
         </p>
       </div>
 
-      {/* IMAGE + CONTENT CARD */}
-      <div className="w-full max-w-[1280px] flex flex-col md:flex-row items-center gap-[80px] relative overflow-visible">
-
-        {/* IMAGE WITH SHADOW */}
-        <div className="w-full max-w-[680px] flex justify-center">
-          <div className="w-[680px] h-[412px] relative flex items-center justify-center">
-            {/* SHADOW BOX */}
-            <div
-              className="
-                absolute bottom-0 
-                w-[680px] h-[264px] 
-                bg-white border border-[#E2E8F0] rounded-[5px]
-                shadow-[0_0_10px_0_#00000012,0_20px_25px_-5px_#0000001A]
-              "
-            ></div>
-
-            {/* FRONT IMAGE */}
+      <div className="w-full max-w-7xl flex flex-col lg:flex-row items-center gap-12 md:gap-20 relative">
+        <div className="w-full max-w-2xl lg:max-w-[680px] flex justify-center">
+          <div className="w-full h-64 sm:h-80 md:h-96 lg:h-[412px] max-w-2xl lg:max-w-[680px] relative flex items-center justify-center">
+            <div className="absolute bottom-0 w-full h-40 sm:h-48 md:h-56 lg:h-[264px] bg-white border border-[#E2E8F0] rounded-[5px] shadow-[0_0_10px_0_#00000012,0_20px_25px_-5px_#0000001A]"></div>
             <Image
               src={image}
               alt="section image"
-              className="w-[680px] h-[412px] object-cover relative z-10"
+              className="w-full h-64 sm:h-80 md:h-96 lg:h-[412px] object-cover relative z-10"
             />
           </div>
         </div>
 
-        {/* CONTENT CARD */}
         <div className=" max-w-[680px]">
           <div
             className="

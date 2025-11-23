@@ -8,8 +8,6 @@ const ThirdSection = () => {
     <div className="w-full bg-white">
       <section className="w-full min-h-screen mx-auto flex justify-center bg-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="w-full h-auto mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-
-
           <div className="flex flex-col justify-center px-4 lg:px-8 xl:px-16 py-8 order-2 lg:order-1">
             <p className="text-[#1959AC] font-['Inter'] text-lg sm:text-[20px] tracking-[-0.02em] font-semibold mb-4 sm:mb-6">
               Lorem ipsum dolor sit amet
@@ -25,10 +23,8 @@ const ThirdSection = () => {
               Lorem ipsum dolor sit amet consectetur. Mauris ullamcorper etiam leo eleifend
               condimentum in vitae faucibus. Amet massa malesuada sit pretium. Donec
               pharetra erat lacus suspendisse ornare.
-
             </p>
 
-            {/* Features List with Big Icons */}
             <div className="flex flex-col space-y-6 sm:space-y-8 mb-8 sm:mb-12">
               {[
                 {
@@ -73,7 +69,6 @@ const ThirdSection = () => {
               ))}
             </div>
 
-
             <div className="flex flex-col sm:flex-row sm:items-center sm:gap-8 gap-4">
               <a
                 href="#"
@@ -113,12 +108,10 @@ const ThirdSection = () => {
         </div>
       </section>
 
-
       <div className="w-full py-10">
         <div className="h-2 bg-gradient-to-r from-blue-600 via-green-500 to-blue-800 rounded-full w-full"></div>
       </div>
-
-    </div >
+    </div>
   );
 };
 

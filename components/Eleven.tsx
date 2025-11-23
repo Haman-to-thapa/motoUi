@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react'
 
 const Eleven = () => {
   return (
-    <div className="relative w-full flex flex-col lg:flex-row gap-8 lg:gap-0 py-16 lg:py-20 text-gray-900">
+    <div className="relative w-full flex flex-col lg:flex-row gap-8 lg:gap-0 py-16 lg:py-20 text-gray-900 mt-20">
       {/* LEFT IMAGE - Full width on mobile, half on desktop */}
       <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
         <img

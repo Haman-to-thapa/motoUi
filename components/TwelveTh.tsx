@@ -11,7 +11,6 @@ import Profile2 from '@/public/profile2.jpg'
 import Profile3 from '@/public/profile3.jpg'
 import Profile4 from '@/public/profile4.jpg'
 
-// Define TypeScript interface for card data
 interface Card {
   id: number;
   icons: React.ReactNode;
@@ -26,7 +25,6 @@ const Twelve: React.FC = () => {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [activeCardIndex, setActiveCardIndex] = useState(0);
 
-  // Array of card data
   const cards: Card[] = [
     {
       id: 1,
@@ -62,7 +60,6 @@ const Twelve: React.FC = () => {
     },
   ];
 
-  // Card dimensions
   const largeCard = {
     width: 364,
     height: 491,
@@ -85,7 +82,7 @@ const Twelve: React.FC = () => {
       if (card) {
         const containerWidth = container.clientWidth;
         const cardWidth = card.offsetWidth;
-        const gap = 24; // gap-6 = 24px
+        const gap = 24;
         const scrollPosition = card.offsetLeft - (containerWidth - cardWidth) / 2 + gap;
 
         container.scrollTo({
@@ -108,7 +105,6 @@ const Twelve: React.FC = () => {
     scrollToCard(newIndex);
   };
 
-  // Handle scroll to detect active card with Intersection Observer
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -123,12 +119,11 @@ const Twelve: React.FC = () => {
       },
       {
         root: scrollContainerRef.current,
-        threshold: 0.6, // Card is considered active when 60% is visible
+        threshold: 0.6,
         rootMargin: '0px'
       }
     );
 
-    // Observe all cards
     cardRefs.current.forEach((card) => {
       if (card) observer.observe(card);
     });
@@ -140,7 +135,6 @@ const Twelve: React.FC = () => {
     };
   }, []);
 
-  // Handle manual scroll with buttons
   const handleManualScroll = (direction: 'left' | 'right') => {
     if (direction === 'left') {
       scrollLeft();
@@ -150,42 +144,34 @@ const Twelve: React.FC = () => {
   };
 
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-20 py-16 lg:py-20 flex flex-col gap-12 lg:gap-20 bg-[#155ADA] mt-20">
-
-      {/* ------------------ TOP SECTION ------------------ */}
-      <div className="w-full max-w-[1280px] mx-auto flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-4">
-
-        {/* LEFT TEXT BLOCK */}
-        <div className="w-full lg:w-[814px] flex flex-col gap-6">
-          <h5 className="font-['Inter'] font-semibold text-xl lg:text-2xl leading-none tracking-tight text-white">
+    <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-20 py-12 sm:py-16 lg:py-20 flex flex-col gap-8 sm:gap-12 lg:gap-20 bg-[#155ADA] mt-12 sm:mt-16 lg:mt-20">
+      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-6 sm:gap-8 lg:gap-4">
+        <div className="w-full lg:w-[814px] flex flex-col gap-4 sm:gap-6">
+          <h5 className="font-['Inter'] font-semibold text-lg sm:text-xl lg:text-2xl leading-none tracking-tight text-white">
             Join other Sun harvesters
           </h5>
 
-          <h1 className="font-['Roboto_Condensed'] font-bold text-3xl lg:text-4xl xl:text-[42px] uppercase leading-tight tracking-tight text-white">
+          <h1 className="font-['Roboto_Condensed'] font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] uppercase leading-tight tracking-tight text-white">
             LOREM IPSUM DOLOR SIT AMET
           </h1>
 
-          <p className="font-['Inter'] text-base lg:text-lg leading-relaxed text-white/90">
+          <p className="font-['Inter'] text-sm sm:text-base lg:text-lg leading-relaxed text-white/90">
             Dui euismod iaculis libero, aliquet vitae et elementum porttitor.
             Eleifend mi tristique condimentum congue fusce nunc, donec magnis commodo.
           </p>
         </div>
 
-        {/* BUTTON BLOCK */}
         <div className="w-full lg:w-[238px] pt-0 lg:pt-10">
-          <button className="w-full lg:w-auto px-8 py-4 rounded-lg bg-white shadow-lg font-['Inter'] font-bold text-base text-black hover:bg-gray-100 transition-colors duration-200">
+          <button className="w-full lg:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-lg bg-white shadow-lg font-['Inter'] font-bold text-sm sm:text-base text-black hover:bg-gray-100 transition-colors duration-200">
             Lorem Ipsum
           </button>
         </div>
       </div>
 
-      {/* ------------------ CARDS SECTION WITH SMOOTH SCROLLING ------------------ */}
-      <div className="w-full max-w-[1280px] mx-auto relative">
-
-        {/* SCROLLABLE CONTAINER */}
+      <div className="w-full max-w-7xl mx-auto relative">
         <div
           ref={scrollContainerRef}
-          className="flex gap-6 overflow-x-auto scrollbar-hide pb-8 items-center"
+          className="flex gap-4 sm:gap-6 overflow-x-auto scrollbar-hide pb-6 sm:pb-8 items-center"
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
@@ -215,7 +201,6 @@ const Twelve: React.FC = () => {
                   transition: 'all 0.5s ease-in-out'
                 }}
               >
-                {/* ICON SECTION - Exact dimensions: 64x64 */}
                 <div
                   className="flex items-center justify-center bg-gray-100 rounded-lg mb-4"
                   style={{
@@ -227,16 +212,13 @@ const Twelve: React.FC = () => {
                   {card.icons}
                 </div>
 
-                {/* CARD CONTENT */}
                 <div className="flex-1">
-                  <p className="font-['Roboto'] text-base leading-relaxed text-gray-700">
+                  <p className="font-['Roboto'] text-sm sm:text-base leading-relaxed text-gray-700">
                     {card.text}
                   </p>
                 </div>
 
-                {/* PROFILE SECTION */}
                 <div className="flex items-center gap-3 mt-4">
-                  {/* Profile Image - Exact dimensions: 64x64 with border radius 100px */}
                   <div
                     className="flex-shrink-0 overflow-hidden"
                     style={{
@@ -256,10 +238,10 @@ const Twelve: React.FC = () => {
                   </div>
 
                   <div className="flex flex-col min-w-0">
-                    <span className="font-['Inter'] font-semibold text-gray-900 text-lg truncate">
+                    <span className="font-['Inter'] font-semibold text-gray-900 text-base sm:text-lg truncate">
                       {card.name}
                     </span>
-                    <span className="font-['Inter'] text-sm text-gray-600 truncate">
+                    <span className="font-['Inter'] text-xs sm:text-sm text-gray-600 truncate">
                       {card.role}
                     </span>
                   </div>
@@ -270,27 +252,25 @@ const Twelve: React.FC = () => {
         </div>
       </div>
 
-      {/* ------------------ ARROW BUTTONS ------------------ */}
-      <div className="w-full max-w-[1280px] mx-auto flex justify-center lg:justify-start">
-        <div className="flex gap-4">
+      <div className="w-full max-w-7xl mx-auto flex justify-center lg:justify-start">
+        <div className="flex gap-3 sm:gap-4">
           <button
             onClick={() => handleManualScroll('left')}
             disabled={activeCardIndex === 0}
-            className="w-12 h-12 bg-white border border-white shadow-lg flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-10 h-10 sm:w-12 sm:h-12 bg-white border border-white shadow-lg flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <ArrowLeft className="w-6 h-6 text-black" />
+            <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
           </button>
 
           <button
             onClick={() => handleManualScroll('right')}
             disabled={activeCardIndex === cards.length - 1}
-            className="w-12 h-12 bg-white border border-white shadow-lg flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-10 h-10 sm:w-12 sm:h-12 bg-white border border-white shadow-lg flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <ArrowRight className="w-6 h-6 text-black" />
+            <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
           </button>
         </div>
       </div>
-
     </div>
   );
 };

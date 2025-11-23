@@ -7,22 +7,14 @@ import thrid from '@/public/thrid.png'
 
 const SecondSection = () => {
   return (
-
     <section className="w-full min-h-screen mx-auto flex justify-center bg-white py-16 px-4 sm:px-6 lg:px-8">
-      <div
-        className="w-full h-auto mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center"
-        aria-labelledby="details-heading"
-      >
-        {/* Text Content */}
+      <div className="w-full h-auto mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         <div className="flex flex-col justify-center px-4 lg:px-8 xl:px-16 py-8 order-2 lg:order-1">
           <p className="text-[#1959AC] font-['Inter'] text-lg sm:text-[20px] tracking-[-0.02em] font-semibold mb-4 sm:mb-6">
             Lorem ipsum dolor sit
           </p>
 
-          <h2
-            id="details-heading"
-            className="font-['Roboto_Condensed'] text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-[-0.02em] text-[#222222] mb-4 sm:mb-6 leading-tight"
-          >
+          <h2 className="font-['Roboto_Condensed'] text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-[-0.02em] text-[#222222] mb-4 sm:mb-6 leading-tight">
             LOREM IPSUM
             <br />
             DOLOR SIT AMET
@@ -32,7 +24,6 @@ const SecondSection = () => {
             Lorem ipsum dolor sit amet consectetur. Amet sodales sociis facilisis molestie dui. Mi porttitor ut aliquam mattis maecenas orci eget integer in nam.
           </p>
 
-          {/* Features List */}
           <div className="flex flex-col space-y-6 sm:space-y-8 mb-8 sm:mb-12">
             {[
               {
@@ -51,7 +42,7 @@ const SecondSection = () => {
               <div key={idx} className="flex items-start gap-4 sm:gap-6">
                 <img
                   src={item.img.src}
-                  alt={`Feature ${idx + 1} showing motorcycle detail`}
+                  alt={`Feature ${idx + 1}`}
                   className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-lg flex-shrink-0"
                   loading="lazy"
                   onError={(e: any) => {
@@ -65,7 +56,6 @@ const SecondSection = () => {
             ))}
           </div>
 
-          {/* CTA ROW */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:gap-8 gap-4">
             <a
               href="#"
@@ -91,11 +81,10 @@ const SecondSection = () => {
           </div>
         </div>
 
-        {/* Hero Image */}
         <div className="relative w-full h-[350px] sm:h-[450px] lg:h-[550px] xl:h-[600px] flex items-center justify-center bg-gray-50 rounded-xl overflow-hidden order-1 lg:order-2">
           <img
             src={secondHero.src}
-            alt="Premium black and orange motorcycle on display with detailed features visible"
+            alt="Premium black and orange motorcycle on display"
             className="w-full h-full object-cover"
             loading="eager"
             onError={(e: any) => {
@@ -105,7 +94,6 @@ const SecondSection = () => {
         </div>
       </div>
     </section>
-
   );
 };
 

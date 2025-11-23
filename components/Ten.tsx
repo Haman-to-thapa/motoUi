@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react'
 const Ten = () => {
   return (
     <section
-      className="relative w-full min-h-screen flex items-center justify-center px-4 py-16 md:py-24 lg:py-32 bg-white overflow-hidden"
+      className="relative w-full min-h-screen flex items-center justify-center px-4 py-16 md:py-24 lg:py-32 bg-white overflow-hidden mt-20"
     >
       {/* Background image with overlay for better readability */}
       <div className="absolute inset-0 w-full h-screen ">
